@@ -7,12 +7,12 @@ namespace OrderManagementApi.Data
     {
         public static void Initialize(AppDbContext context)
         {
-            
             context.Database.EnsureCreated();
 
+           
             if (context.Users.Any())
                 return;
-            //Адмін
+
             var admin = new User
             {
                 Username = "admin",
